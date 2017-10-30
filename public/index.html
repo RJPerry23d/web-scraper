@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Super Hero News</title>
+
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection" />
+  <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection" />
+</head>
+
+<body>
+  <nav class="light-blue" role="navigation">
+    <div class="nav-wrapper container">
+      <a id="logo-container" href="/" class="brand-logo hide-on-med-and-down">Hero News Scraper</a>
+      <ul class="right hide-on-med-and-down">
+        <li>
+          <a href="/">Home</a>
+        </li>
+        <a href="#" id="scrapeArticles" class="btn waves-effect waves-light red accent-2">Scrape Articles</a>
+      </ul>
+
+      <ul id="nav-mobile" class="side-nav">
+        <li>
+          <a href="">Home</a>
+        </li>
+        <a href="#" id="scrapeArticles" class="btn waves-effect waves-light red accent-2">Scrape Articles</a>
+
+      </ul>
+      <a href="#" data-activates="nav-mobile" class="button-collapse">
+        <i class="material-icons">menu</i>
+      </a>
+    </div>
+  </nav>
+  <div id="wrapper">
+    <div>
+      <h2>
+        <i>Find out the latest news and leave your comments.</i>
+      </h2>
+    </div>
+    <div id="articles"></div>
+    <div id="notes"></div>
+  </div>
+  <footer class="page-footer light-blue darken-2">
+      
+       <div class="footer-copyright">
+         <div class="container">
+           Made by <a class="brown-text text-lighten-3" href="http://materializecss.com">RJ Perry</a>
+         </div>
+       </div>
+     </footer>
+  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script src="js/materialize.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="app.js"></script>
+
+</body>
+
+</html>
