@@ -1,6 +1,15 @@
 $(document).on("click", "#scrapeArticles", function () {
-  $("#articles").empty();  
-  scrapeArticles();  
+  $("#info-div").empty();
+  $("#articles").empty();
+
+  $.ajax({
+    method: "POST",
+    url: "/remove"
+  }).done(function(data) {
+    console.log(data);
+    scrapeArticles();
+  });
+  scrapeArticles();
 });
 
 function scrapeArticles() {
@@ -15,13 +24,13 @@ function scrapeArticles() {
 
 // Grab the articles as a json
 function loadData() {
-$.getJSON("/articles", function (data) {
-  // For each one
-  for (var i = 0; i < data.length; i++) {
-    // Display the apropos information on the page
-    $("#articles").append("<p data-id='" + data[i]._id + "'>" + "<strong>" + data[i].title + "</strong>" + "<br />" + "<a href='" + data[i].link + "' target='_blank'>" + data[i].link + "</a>" + "</p>");
-  }
-});
+  $.getJSON("/articles", function (data) {
+    // For each one
+    for (var i = 0; i < data.length; i++) {
+      // Display the apropos information on the page
+      $("#articles").append("<p data-id='" + data[i]._id + "'>" + "<strong>" + data[i].title + "</strong>" + "<br />" + "<a href='" + data[i].link + "' target='_blank'>" + data[i].link + "</a>" + "</p>");
+    }
+  });
 }
 
 
